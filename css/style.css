@@ -1,0 +1,236 @@
+/* common set */
+nav {
+    background-color: #004742;
+}
+
+/* create animation */
+nav a:hover {
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+
+footer {
+    background-color: #004742;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    color: white;
+    text-align: center;
+}
+
+/* sticky back-to-top arrow */
+footer a.top {
+    background-color: rgba(230, 234, 239, 0.5);
+	width: 20px;
+	height: 20px;
+    border-radius: 50%;
+    position: fixed;
+	right: 30px;
+    bottom: 30px;
+
+    color: #004742;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+
+footer a.top:hover {
+    background-color: rgba(230, 234, 239, 1);
+    transition: 0.5s 0.1s;
+}
+
+/* home */
+/* overlay effect */
+div.banner {
+    position: relative;
+}
+
+div.banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+div.overlay {
+    position: absolute;
+    background-color: #004641;
+    opacity: 45%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+div.overlay-text {
+    width: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+/* layout needs to be changed at breakpoints */
+div.container-about {
+    color: #004742;
+}
+
+div.container-about .about {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* developer and design*/
+
+/* bootstrap controls the color of the paragraph */
+blockquote {
+    color: #004742;
+}
+
+/* same layout at these two pages */
+div.web, div.ui {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.web img, div.ui img{
+    width: 100%;
+}
+
+div.buttons {
+    width: 80%;
+    margin: auto;
+}
+
+button {
+    background-color: #869E8F;
+    border-color: #869E8F;
+    border-radius: 7px;
+    border-style: none;
+}
+
+/* change the before and after appearance */
+button a:link, button a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+button a:hover, button a:active {
+    color: #004742;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+/* photographer */
+div.photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.photo img {
+    width: 80%;
+    margin: 0 auto 20px auto;
+}
+
+/* it is a bootstrap id */
+div#carouselExampleIndicators {
+    display: none;
+}
+
+/* contact */
+form {
+	width: 80%;
+    margin: 20px auto;
+    margin-bottom: 40px;
+}
+
+fieldset {
+    padding-left: 20px;
+    padding-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px;
+	border-color: #869E8F;
+}
+
+legend {
+    width: auto;
+	color: #00443F;
+}
+
+label {
+	display: block;
+	color: #1E665B;
+}
+
+input {
+    background-color: #004742;
+    opacity: 20%;
+	width: 90%;
+	margin: 3px;
+	padding: 5px;
+	border-style: none;
+
+    /* the color of the text that is inout */
+	color: #004742;
+}
+
+@media (min-width: 500px) {
+    /* home */
+    div.container-about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* developer and design*/
+    div.web, div.ui {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    div.web img, div.ui img{
+        width: 50%;
+    }
+
+    div.buttons {
+        width: 40%;
+        margin: auto;
+    }
+
+    /* photographer */
+    div.photo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    div.photo img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    /* home */
+    div.container-about {
+        display: flex;
+        /* flex-direction: row is by default */
+        /* justify-content: space-between is by default; */
+    }
+
+    /* photographer */
+    div.photo {
+        display: none;
+    }
+
+    div#carouselExampleIndicators {
+        display: block;
+    }
+}
